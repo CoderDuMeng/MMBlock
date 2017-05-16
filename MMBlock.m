@@ -57,9 +57,7 @@ int block_dynamicPerformBlock(id block ,NSArray *arguments){
                 if (index >= numberOfArguments)break;
                 [invocation setArgument:&value atIndex:index];
             }
-            [invocation invokeWithTarget:block];
-    } else {
-        [invocation invokeWithTarget:block];
     }
+    [invocation invokeWithTarget:block];
     return 0;
 }
